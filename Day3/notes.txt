@@ -1,0 +1,44 @@
+Recommendations to write Java Program : 
+
+1. Class name should be always Capitalized. e.g Employee not employee
+2. variable names should be always in lowercase, if it is combination of multiple words then it should be camelCase
+   
+3. data members should be declared as private
+4. member functions should be declared as public
+5. constants should be completely in capital letters. e.g. PI
+6. every member function/function should return something
+7. member function should follow the concept of verb
+   addNumbers
+8. As far as possible method should not have void as a return type 
+9. All the instance variables, while being accessed should be prefixed with keyword 'this'
+10. The ideal or complete class should have : 
+	a. default and parameterized constructor
+	b. private data members and public member functions
+	c. getters and setters for data members
+	d. toString method to return the string representation of object
+
+
+
+Constructor
+1. Special method, having the exact name as that of a class 
+2. Constructors are invoked implicitly when new keyword created object
+3. JVM always provides you its own constructor to initiate the default values
+4. You can create your own constructor to set up your own default values
+5. Sequence : JVM Constructor --> Developers constructor 
+6. You cannot invoke the constructor like other methods
+7. constructors are of two types
+	default   :no arugments. 
+	overloaded:contains arguemnts, matching with the object creation arguments
+
+	
+this
+1. the keyword 'this' represents current object
+2. it removes the ambuiguity between the formal arguments and the datamembers
+3. Invokes the other constructor for the same object 
+4. You can invoke the other construtor using this(), only from the existing constructor
+
+var-arguments
+1. It take variable arguments i.e. any number or arguemnts of the same data type
+2. In a single method, there can be only one var-arg
+3. You can have other primitives or reference along with var-argument, but var-argument should be the last arguemnt in the method sign. 
+
