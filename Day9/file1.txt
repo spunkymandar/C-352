@@ -1,0 +1,1 @@
+You are learing core java nowThis is demonstration of file IO

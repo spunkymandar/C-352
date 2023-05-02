@@ -1,0 +1,10 @@
+File I/O 
+
+File : create the file and other services 
+
+FileInputStream : Open the file in the read format (Byte)
+FileOutputStream: Open the file in the write format (Byte)
+
+FileReader : Open the the file in ther read format (Char)
+FileWriter: Open the file in the write format(Char)
+

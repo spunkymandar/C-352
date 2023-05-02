@@ -1,0 +1,3 @@
+Let us learn the character hierarchy
+Characer hierarchy takes the data in the character format
+It is more developers' friendly. As they do not have to cast it to bytes
