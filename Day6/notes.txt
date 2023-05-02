@@ -1,0 +1,63 @@
+Inheritance : Is-a kind relationship
+	Vehicle -> 4 wheeler extends Vehicle
+		    -> multiAxle extends Vehicle
+
+	Employee ->SalesPerson
+			 ->WageEmployee
+	
+	Phone -> Landline
+	      -> CellPhone
+	      
+Types: 
+	Single Inheritance : One class can extend other class 
+	Multiple Inheritance : Not supported in Java directly 
+	
+Every class have a cosmic super class: Object
+Object class provides the utility methods for your own object or some lifecycle methods
+toString
+equals
+clone
+getClass
+finalize
+wait
+notify
+notifyall
+
+
+You can customize or add the behaviour of your own in sub class 
+Cusotmizing the behaviour is termed as overriding 
+super class is having some implementation for some behaviour. Your class want to perform the
+same behaviour but in different way. You implement the concept of overriding. 
+
+Rules for method overriding: 
+1. Method signature must match (method name and argument must match) 
+2. The method in the super class must not be final 
+3. method in the super class must not be private
+4. The access specifier of the overridden method, must not be more restrictive than the original method
+5. Overridden method can have exactly same return type as that of original method or
+   CO-VARIANT return type (subtype of return type) of the original method
+6. You cannot override the static methods 
+
+
+
+Concrete class/method
+ Class or method which contains a body/mass into it. which makes it complete as an implementation. 
+
+Abstract class/method
+ Incomplete classes/methods, with no associated body as a part of it. 
+ if a class contains any/all methods as abstract we need to declare that class as abstract class 
+ Abstract class cannot be instantiated 
+ If abstract class is extended by other classes, the subclass must implement the abstract methods. 
+ Otherwise, subclass can also declare itself as an abstract
+ 
+ Abstract class can contain constructor
+ 
+ Animal
+ Dog
+ HuskyDog     LabradorDog
+ 
+
+
+
+
+

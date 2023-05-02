@@ -1,0 +1,47 @@
+Error : Compilation Time
+Exception : Dynamic/Run time
+
+
+Exception handling
+-------------------
+1. What is exception
+	Unwanted execution that generates during during runtime
+	Something because of which your program abruptly terminates
+			Object  
+			
+			Throwable 
+	
+	Error 					Exception
+							  IOException				RunTimeException
+							  FileNotFoundExcpetion		  ArithmeticException
+							  							  NullPointerException
+							  							  ArrayIndexOutOfBoundsExcpetion
+	
+	
+	
+	
+2. Types of Exceptions
+	Checked Exception : checked at compilation, you are forced to handle it.
+	Unchecked Excpetion
+3. What do you mean to handle it
+	Handling the exception is NOT ALWAYS RECTIFYING it 
+	a.Program gracefully shuts down with proper message 
+	b.The segments which are not connected with the exception whould executed as expected 
+
+4. How to handle it
+	a. find out the part of the code which is under threat of exception 
+	b. put that code under the try block 
+	c. add the catch block which will have the arugument matching with the exception that you are expecting
+	try(){
+	}catch(){}
+
+	try with catch
+	try with finally
+	try with catch and finally 
+	
+try,catch,finally, throws, throw
+
+
+
+5. 
+	

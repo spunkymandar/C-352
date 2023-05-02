@@ -1,0 +1,14 @@
+Access modifiers/specifiers
+	private : Accessed only within that class
+	default : Accessed within same class, as well as the other classes in the same package
+	protected: Accessed within the same class, as well other classes in the same package
+	           to other classes from other packages, if the class is having relationship with that class.
+	           You must use the import statement to acheive this
+	public: accessed to everyone, any class in an application
+			You must use the import statement
+			You can also create a .jar file of app so as to make it accessbile out of the application
+		
+
+Package centric application developement
+
+inheritance

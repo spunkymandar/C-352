@@ -1,0 +1,11 @@
+Containment :
+	Has-a kind of inheritance
+	When one object is attribute of another object 
+	Car-Engine
+	Employee-Address
+	BankAccount-Person
+	Usage: 
+		1. Reusability 
+		2. Maintainability 
+		
+	
