@@ -1,0 +1,21 @@
+JDBC API : java.sql
+
+Driver : software which converts the Java API calls to DB API and vice-versa
+Type1 : ODBC preinstalled with OS. Used for prototyping
+Type2 : Native drivers provided by client
+Type3 : Network drivers
+Tyep4 : Vendor Specific Driver : Fastest 
+
+
+DriverManager -->getConnection    : Connect to the underlying database 
+Connection --> createStatement	  : setup the create the statement 
+Statement  --> executeQuery       : used to query the database
+ResultSet						  : group of the records based on the query fired by executeQuery
+
+
+
+
+PreparedStatement
+CallableStatement
+ResultSetMetadata
+DatabaseMetadata
