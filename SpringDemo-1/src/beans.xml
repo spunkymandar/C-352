@@ -4,9 +4,61 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
    
-    <bean id="emp1" class="com.beans.Employee">
-    
+    <bean id="emp1" class="com.beans.Employee"> 
+   		<property name="empId" value="101"/> <!-- setter methods -->
+    	<property name="empName" value="JohnDoe"/>
+    	<property name="deptName" value="Sales"/>
     </bean>
+    
+    <bean id="emp2" class="com.beans.Employee">
+   		<property name="empId" value="102"/> <!-- setter methods -->
+    	<property name="empName" value="Alex Carey"/>
+    	<property name="deptName" value="Tech"/>
+    </bean>
+    
+    <!--  constructor injection -->
+    <bean id="emp3" class="com.beans.Employee">
+    	<constructor-arg value="103"/>
+    	<constructor-arg value="Dave Smith"/>
+    	<property name="deptName" value="Technology"/>
+    	
+    </bean>
+
+	<bean id="emp4" class="com.beans.Employee">
+    	
+    	<constructor-arg value="Dave Smith"/>
+    	<constructor-arg value="104" type="int" index="0"/>
+    	<constructor-arg value="Sales"/>
+    	
+    </bean>
+	
+	
+    <bean id="car1" class="com.beans.Car">
+    	<constructor-arg value="76" type="double"/>
+    </bean>
+    
+    
+    
+   
+   	 <bean id="cust1" class="com.beans.Customer">
+   	 	<constructor-arg value="101"/>
+   	 	<constructor-arg value="John Doe"/>
+   	 	<constructor-arg ref="address2"/>
+   	 </bean>
+    
+     <bean id="address1" class="com.beans.Address">
+     	<constructor-arg value="Arora Towers"/>
+     	<constructor-arg value="C352"/>
+     	<constructor-arg value="NewYork"/>
+     	<constructor-arg value="USA"/>
+      </bean>
+    
+     <bean id="address2" class="com.beans.Address">
+     	<constructor-arg value="High Towers"/>
+     	<constructor-arg value="somestreet"/>
+     	<constructor-arg value="Licsdlsef"/>
+     	<constructor-arg value="UK"/>
+      </bean>
     
     
 </beans>
