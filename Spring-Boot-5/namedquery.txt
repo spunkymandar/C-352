@@ -1,0 +1,14 @@
+@Entity
+@Table(name = "cities")
+@NamedQuery(name = "City.findAllOrderedByNameDescending",
+        query = "SELECT c FROM City c ORDER BY c.name DESC")
+public class City {
+..
+}
+
+
+@Repository
+public interface CityRepository extends CrudRepository<City, Long> {
+
+    List<City> findAllOrderedByNameDescending();
+}

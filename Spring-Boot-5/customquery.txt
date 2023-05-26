@@ -1,0 +1,6 @@
+@Repository
+public interface CityRepository extends CrudRepository<City, Long> {
+
+    @Query("select c from City c where c.name like %?1") //JPQL
+    List<City> findByNameEndsWith(String chars);
+}

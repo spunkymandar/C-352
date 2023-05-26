@@ -1,0 +1,34 @@
+@Repository
+public interface CountryRepository extends PagingAndSortingRepository<Country, Long> {
+
+}
+
+public interface ICountryService {
+
+}
+
+@Service
+public class CountryService implements ICountryService {
+
+    @Autowired
+    private CountryRepository repository;
+
+    @Override
+    public List<Country> findPaginated(int pageNo, int pageSize) {
+
+        Pageable paging = PageRequest.of(pageNo, pageSize);
+        Page<Country> pagedResult = repository.findAll(paging);
+
+        return pagedResult.toList();
+    }
+}
+
+
+ @GetMapping("/countries/{pageNo}/{pageSize}")
+    public List<Country> getPaginatedCountries(@PathVariable int pageNo, 
+            @PathVariable int pageSize) {
+
+        return countryService.findPaginated(pageNo, pageSize);
+ }
+ 
+ localhost:8080/countries/0/5 : returns first 5 rows

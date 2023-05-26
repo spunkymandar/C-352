@@ -1,0 +1,53 @@
+zetcode
+Derived method in spring jpa: 
+----------------------------------
+@Repository
+public interface CityRepository extends CrudRepository<City, Long> {
+
+    List<City> findByNameEndingWith(String ending);
+    List<City> findByPopulationLessThan(int population);
+}
+
+public interface ICityService {
+
+    List<City> findByNameEndingWith(String ending);
+    List<City> findByPopulationLessThan(int population);
+}
+
+@Service
+public class CityService implements ICityService {
+
+    @Autowired
+    private CityRepository cityRepository;
+
+    @Override
+    public List<City> findByNameEndingWith(String ending) {
+        return cityRepository.findByNameEndingWith(ending);
+    }
+
+    @Override
+    public List<City> findByPopulationLessThan(int population) {
+        return cityRepository.findByPopulationLessThan(population);
+    }
+}
+
+@Component
+public class MyRunner implements CommandLineRunner {
+
+    private static final Logger logger = LoggerFactory.getLogger(MyRunner.class);
+
+    @Autowired
+    private ICityService cityService;
+
+    @Override
+    public void run(String... args) throws Exception {
+
+        logger.info("Finding cities having population less than one million");
+        var res1 = cityService.findByPopulationLessThan(1000000);
+        logger.info("{}", res1);
+
+        logger.info("Finding cities by name ending with 'est'");
+        var res2 = cityService.findByNameEndingWith("est");
+        logger.info("{}", res2);
+    }
+}
